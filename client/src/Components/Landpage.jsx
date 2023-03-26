@@ -1,9 +1,12 @@
 import React from 'react'
 import l from "./family.png";
+import b from "./b.jpg";
+
 
 function Landpage() {
   return (
     <>
+    
     <div>
   <header>
     <nav>
@@ -17,6 +20,8 @@ function Landpage() {
     </nav>
   </header>
   <main>
+  
+
     <h2>Every family has a story</h2>
     <p>By learning about family roots, individuals can gain a sense of pride and connection to their heritage.
       It can also help individuals understand the challenges and accomplishments of their ancestors,
