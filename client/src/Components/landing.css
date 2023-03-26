@@ -46,7 +46,8 @@
     line-height: 1.1;
   }
  
-  button {
+ 
+ .landing-btn {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 1rem;
@@ -54,15 +55,15 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: black;
     cursor: pointer;
     transition: border-color 0.25s;
   }
-  button:hover {
+  .landing-btn:hover {
     border-color: #646cff;
   }
-  button:focus,
-  button:focus-visible {
+  .landing-btn:focus,
+  .landing-btn:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
   
@@ -81,5 +82,8 @@
   @media only screen and (max-width: 600px) {
     .nav-links{
         display: none;
+    }
+    .para{
+        width: 100%;
     }
   }

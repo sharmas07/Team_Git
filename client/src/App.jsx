@@ -3,10 +3,13 @@ import "./App.css";
 import logo from './assets/family.png'
 import './Components/landing.css'
 import Landpage from "./Components/Landpage";
+import './Components/Register.css'
+import Register from "./Components/Register";
+import Login from "./Components/Login";
 
 function App() {
   return (
-    <>
+    <div className="main-app">
     <header className="nav">
           <nav>
             <div className="logo">
@@ -19,8 +22,10 @@ function App() {
             </ul>
           </nav>
         </header>
-      <Landpage />
-    </>
+         <Landpage/>
+         <Register/>
+         <Login />
+    </div>
   );
 }
 

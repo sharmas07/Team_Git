@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/family.png";
 import './landing.css'
 function Landpage() {
   return (
@@ -17,10 +16,13 @@ function Landpage() {
           </h3>
           </div>
           <div className="land-btns">
-          <button>
-             SignUp/Singin
+          <div><button className="landing-btn">
+             SignUp
           </button>
-          <button>
+          <button className="landing-btn">
+             SignIn
+          </button></div>
+          <button className="landing-btn">
              Explore
           </button>
           </div>
