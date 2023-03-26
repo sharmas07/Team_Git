@@ -15,7 +15,14 @@
   }
   .nav{
     background-color: black;
+    
   }
+  .nav-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .landing-main{
     height: 85vh;
     display: flex;
@@ -85,5 +92,6 @@
     }
     .para{
         width: 100%;
+        font-size: 0.7rem;
     }
   }
