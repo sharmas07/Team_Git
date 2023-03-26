@@ -3,11 +3,12 @@ import * as dotenv from 'dotenv';
 import User from '../mongodb/models/user.js'
 dotenv.config();
 const router = express.Router();
-// post a post
+// post a user
 router.route('/').post(async(req, res)=>{
     const {username, password, secretkey} = req.body;
-        let reg_user = User.find({username:username});
-        if(reg_user.username === username){
+        console.log(username);
+        const reg_user = await User.find({username});
+        if(reg_user.length != 0){
             res.json({error:"user already exist"})
         }
         else{
