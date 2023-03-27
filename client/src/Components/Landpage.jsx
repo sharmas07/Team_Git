@@ -1,5 +1,7 @@
 import React from "react";
 import './landing.css'
+import { Link } from "react-router-dom";
+
 function Landpage() {
   return (
     <>
@@ -17,13 +19,13 @@ function Landpage() {
           </div>
           <div className="land-btns">
           <div><button className="landing-btn">
-             SignUp
+             <Link to='/signup'>SignUp</Link>
           </button>
           <button className="landing-btn">
-             SignIn
+            <Link to='/signin'>SignIn</Link>
           </button></div>
           <button className="landing-btn">
-             Explore
+            <Link to='/findbysecretkey'>Explore</Link>
           </button>
           </div>
         </main>

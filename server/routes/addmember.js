@@ -18,6 +18,7 @@ router.route('/').post(async(req, res)=>{
             relationDescription,
             alive
         })
+        console.log('memberadded');
         res.json({succes:true,newMember})
     } catch (error) {
         res.json({succes:false})
