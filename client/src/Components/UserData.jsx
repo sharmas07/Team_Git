@@ -12,7 +12,16 @@ function UserData() {
     <>
         <div className="main">
         <div className="allmembers">
-         
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
+          <Member/>
           <Member/>
         </div>
         <button className='add-btn'><Link to='/addmember'>Add Member</Link></button>

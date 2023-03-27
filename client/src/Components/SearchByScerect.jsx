@@ -37,14 +37,18 @@ function Register() {
   return (
     <>
     <div className="container">
+    
       <form className="form">
-        <span className="title">Sign In</span>
+        
+        <span className="title">You can access any ones family tree with thier secret key</span>
         <input onChange={(e)=>{setSecretkey(e.target.value)}} type="text" className="input" placeholder="SecretKey" />
         {!login && <h4 style={{color:'red'}}>please enter valid credentials</h4>}
         <span className="sub">
           Already have an account ? <a href="/signup">Sign Up</a>
         </span>
-        <button className="register-btn" type="submit" onClick={onRegister} >Find</button>
+        <button className="register-btn" type="submit" onClick={onRegister} >
+         <Link to='/getbyusername'>Find</Link> 
+          </button>
       </form>
       </div>
     </>

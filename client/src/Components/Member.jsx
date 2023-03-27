@@ -6,16 +6,12 @@ function ProductCard() {
     <div className='product-card'>
       <div className="product-card-left">
         <div className='product-details'>
-          <span className='product-detail'>Product Name: MacBook</span>
-          <span className='product-detail'>Bid Creator: Sharmas</span>
-          <span className='product-detail'>Bid Started With: $100</span>
-        </div>
-      </div>
-      <div className="product-card-right">
-        <div className='product-right-content'> 
-          <span className="current-price">Current Price: $200</span>
-          <span className="current-price">Last Bidder: sharmas </span>
-          <span className="bid-btn">MAKE YOUR BID</span>
+          <span className='product-detail'>Name: johnDoe</span>
+          <span className='product-detail'>D.O.B: 12-12-1990</span>
+          <span className='product-detail'>gender: Male</span>
+          <span className='product-detail'>relation Description: some in law</span>
+          <span className='product-detail'>occupation: software engineer</span>
+          <span className='product-detail'>your relation : xxxx</span>
         </div>
       </div>
     </div>
