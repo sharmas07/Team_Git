@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import "./Register.css";
 import axios from 'axios'
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Register() {
+  let navigate = useNavigate();
   const[newUser, setnewUser] = useState({
     username: '',
     password:''
   });
-  const [login, setlogin] = useState(true) 
+  const [loginmsg, setloginmsg] = useState(false) 
+  const [login, setlogin] = useState(false) 
   const onRegister = async (e)=>{
     let {username, password} = newUser;
     e.preventDefault();
@@ -22,20 +24,24 @@ function Register() {
       console.log(response);
       if (data.loggedin === true) {
         setlogin(true);
+        setloginmsg(false)
         localStorage.setItem('login',true);
         let {username, secretkey} = data.userdata[0];
         // console.log(username)
         // console.log(secretkey)
       }
       else{
-        setlogin(false)
+        setloginmsg(true)
       }
       
     })
     .catch(function (error) {
       console.log(error);
     });
-    // navigate('/')
+    
+  }
+  if(login===true){
+    navigate('/getbyusername')
   }
   return (
     <>
@@ -44,7 +50,7 @@ function Register() {
         <span className="title">Sign In</span>
         <input onChange={(e)=>{setnewUser({...newUser,username: e.target.value})}} type="text" className="input" placeholder="username" />
         <input onChange={(e)=>{setnewUser({...newUser,password: e.target.value})}}   type="password" className="input" placeholder="password" />
-        {!login && <h4 style={{color:'red'}}>please enter valid credentials</h4>}
+        {loginmsg && <h4 style={{color:'red'}}>please enter valid credentials</h4>}
         <span className="sub">
           Already have an account ? <a href="/signup">Sign Up</a>
         </span>

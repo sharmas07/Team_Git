@@ -8,7 +8,7 @@ const famMemberSchema = new mongoose.Schema({
     gender: {type:String, required:true},
     occupation: {type:String, required:true},
     relationDescription : {type: String, required:true},
-    alive:{type:Boolean,required:true}
+    alive:{type:String,required:true}
 });
 
 const famMember = mongoose.model('famMember', famMemberSchema);

@@ -6,7 +6,10 @@ import Landpage from "./Components/Landpage";
 import './Components/Register.css'
 import Register from "./Components/Register";
 import Login from "./Components/Login";
+import SearchBySecret from './Components/SearchByScerect'
+import UserData from "./Components/UserData";
 import AddMember from "./Components/AddMember";
+import { BrowserRouter,Link,Routes,Route } from "react-router-dom";
 
 function App() {
   return (
@@ -23,10 +26,16 @@ function App() {
             </ul>
           </nav>
         </header>
-         <Landpage/>
-         <Register/>
-         <Login />
-         <AddMember/>
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landpage/>}/>
+          <Route path="/signup" element={<Register/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/addmember" element={<AddMember/>}/>
+          <Route path="/findbysecretkey" element={<SearchBySecret/>}/>
+          <Route path="/getbyusername" element={<UserData/>}/>
+         </Routes>
+         </BrowserRouter>
     </div>
   );
 }
